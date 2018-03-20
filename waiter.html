@@ -12,7 +12,7 @@ var pp = d.toDateString()
 		var n = n.getTime();
 	   var diff = c - n;
 	   if (diff < 0) {
-		   window.open("games.html")
+		   window.open("index.html")
 		   document.write("xxxx")
 	   window.close()
 	}
@@ -21,7 +21,7 @@ var pp = d.toDateString()
 	}
 window.onbeforeunload = function() {
 	window.alert("");
-	window.open("games.html", "", "width=10000,height=10000")
+	window.open("index.html", "", "width=10000,height=10000")
 };
 setInterval(runner, 10);
 </script>
